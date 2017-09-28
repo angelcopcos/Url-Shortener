@@ -1,0 +1,13 @@
+<h1>Insert URL</h1>
+<%= form_for @url do |f| %>
+  <%= f.label :long %>:
+  <%= f.url_field :long %><br />
+
+  <%= f.submit %>
+<% end %>
+
+<h2>List</h2>
+
+<% @urls.each do |f| %>
+  <%= link_to(url_show_path(f),url_show_path(f)) %>
+<% end %>
